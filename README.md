@@ -1,4 +1,4 @@
-# Earth's Field NMR Spectrometer Controller (EFNMR)
+# NMR Spectrometer Controller Firmware & GUI (C++)
 
 A high-precision, low-cost controller for Earth's Field Nuclear Magnetic Resonance (EFNMR) spectroscopy, built on the **Raspberry Pi Pico (RP2040/RP2350)**.
 

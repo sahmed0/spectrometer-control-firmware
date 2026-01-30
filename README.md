@@ -8,10 +8,17 @@ This project uses the Pico's advanced **PIO (Programmable I/O)** and **DMA (Dire
 
 *   **Cycle-Accurate Timing:** Uses dedicated PIO hardware to generate RF pulses with microsecond precision, completely independent of CPU jitter.
 *   **Background Data Acquisition:** Uses DMA to stream ADC data directly to memory, ensuring no samples are missed during complex pulse sequences.
-*   **User-Friendly GUI:** A modern Python interface (CustomTkinter) to control parameters, visualize echoes in real-time, and perform T2 relaxation analysis.
+*   **User-Friendly GUI:** A modern Python interface (CustomTkinter) to control parameters, visualise echoes in real-time, and perform T2 relaxation analysis.
 *   **Supported Sequences:**
     *   **FID:** Free Induction Decay (Single Pulse).
     *   **CPMG:** Carr-Purcell-Meiboom-Gill (Spin Echo Train) for T2 measurement.
+
+## User Interface
+
+![free induction decay](FID.png)
+![CPMG pulse sequence](CPMG.png)
+![transverse relaxation time](T2.png)
+
 
 ## 🛠️ Hardware Setup
 
@@ -20,7 +27,7 @@ The system is designed for a Raspberry Pi Pico.
 | Pin | Function | Description |
 | :--- | :--- | :--- |
 | **GP16** | `PULSE_PIN` | MOSFET Driver for the RF Transmit Coil (B1 field) |
-| **GP26** | `PP_COIL_PIN` | Relay/Switch for Pre-Polarization Coil (Bp field) |
+| **GP26** | `PP_COIL_PIN` | Relay/Switch for Pre-Polarisation Coil (Bp field) |
 | **GP22** | `DET_SWITCH_PIN` | RX Isolation Switch (Protects receiver during pulses) |
 | **GP28** | `ADC_PIN` | Analog Input from the Receiver (Pre-amp output) |
 | **GP25** | `LED_PIN` | On-board Status LED |
@@ -63,10 +70,20 @@ pip install customtkinter pyserial numpy matplotlib scipy
 ## 🔬 How It Works (The "Secret Sauce")
 
 ### The PIO Engine (`pio_pulses.pio`)
-Instead of using `delay()` or interrupts which are inaccurate, we write a custom assembly program for the Pico's PIO state machines. This program sits in the background and waits for commands. When we say "Go", it executes the entire Pulse-Delay-Pulse sequence with 125MHz precision.
+Instead of using `delay()` or interrupts, which are inaccurate, we write a custom assembly program for the Pico's PIO state machines. This program sits in the background and waits for commands. When we say "Go", it executes the entire Pulse-Delay-Pulse sequence with 125MHz precision.
 
 ### The DMA Engine
 While the PIO is blasting RF pulses, the ADC is running at full speed. We use a DMA channel to silently grab every byte from the ADC and stuff it into a RAM buffer. The main CPU does nothing but wait for the "Done" signal!
 
 ## 📄 License
-Open Source. Feel free to modify and adapt for your own physics experiments!
+Copyright © 2026 Sajid Ahmed. All Rights Reserved.
+
+This repository is intended solely for portfolio review and recruitment purposes. By accessing this repository, you acknowledge the following terms:
+
+View Only: Permission is granted to view the source code for the purpose of evaluating my professional skills and experience.
+
+No Unauthorised Use: No permission is granted to copy, modify, distribute, or use this code for any personal, commercial, or educational project.
+
+No AI Training: Use of this source code for the purpose of training machine learning models or generative AI is strictly prohibited.
+
+If you are a recruiter or a potential collaborator and have questions regarding the implementation of this project, please feel free to reach out via my contact details below.

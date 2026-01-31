@@ -70,12 +70,16 @@ To determine the exact Larmor frequency of the sample (typically ~2 kHz in Earth
 
 ---
 
-## 📄 License & Restrictions
+## Licence & Usage
 
-**Copyright © 2026 Sajid Ahmed. All Rights Reserved.**
+Copyright (c) 2026 Sajid Ahmed. **All Rights Reserved.**
 
-This repository is published for **Portfolio Review** purposes only.
+This repository is strictly for **portfolio review and recruitment purposes**.
 
-*   **View Only**: You are granted permission to view this code to evaluate professional skills.
-*   **No Unauthorised Use**: You may NOT copy, fork, modify, distribute, or run this software. Please contact me for usage authorisation. 
-*   **No AI Training**: You may NOT use this code to train machine learning models.
+### Use Constraints:
+* **No Unauthorised Distribution:** You may not redistribute, sublicense, or sell any part of this source code.
+* **No Commercial Use:** This software may not be used for any commercial or production purposes.
+* **AI & Machine Learning Restriction:** Use of this source code, in whole or in part, for the purpose of training, fine-tuning, or validating machine learning or artificial intelligence models (including but not limited to LLMs and generative AI) is **strictly prohibited** without express written permission from the author.
+* **Viewing & Forking:** Permission is granted to view the source code and fork the repository on GitHub for the purpose of personal review only.
+
+The software is provided **" as is "**, without warranty of any kind.

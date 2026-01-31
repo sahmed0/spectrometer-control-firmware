@@ -77,5 +77,5 @@ To determine the exact Larmor frequency of the sample (typically ~2 kHz in Earth
 This repository is published for **Portfolio Review** purposes only.
 
 *   **View Only**: You are granted permission to view this code to evaluate professional skills.
-*   **No Unauthorised Use**: You may NOT copy, fork, modify, distribute, or run this software.
+*   **No Unauthorised Use**: You may NOT copy, fork, modify, distribute, or run this software. Please contact me for usage authorisation. 
 *   **No AI Training**: You may NOT use this code to train machine learning models.
